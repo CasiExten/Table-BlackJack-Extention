@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "Extention BJ",
+  "version": "1.0",
+  "permissions": [
+    "cookies",
+    "activeTab"
+  ],
+  "host_permissions": [
+    "https://stake.com/*",
+    "https://stake.bet/*",   
+    "https://stake.ac/*",
+    "https://stake.games/*",
+    "https://roobet.com/*"  
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+    }
+  },
+  "default_popup_size": {
+    "width": 400,
+    "height": 600
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["bj.png"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}
