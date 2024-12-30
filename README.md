@@ -13,10 +13,7 @@ This is a Google Chrome extension that displays a Blackjack table when opened. T
 
 ## Installation
 
-1. Clone the repository or download the ZIP file.
-   ```bash
-   git clone https://github.com/yourusername/blackjack-extension.git
-   ```
+1. Download the ZIP file.
 2. Open Google Chrome and go to `chrome://extensions/`.
 3. Enable **Developer mode** (toggle in the top right corner).
 4. Click **Load unpacked** and select the folder containing the extension files.
