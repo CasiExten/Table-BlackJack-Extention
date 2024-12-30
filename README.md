@@ -29,10 +29,10 @@ This is a Google Chrome extension that displays a Blackjack table when opened. T
 
 ## Screenshots
 
-![Blackjack Table](path/to/screenshot1.png)
+![Blackjack Table](path/to/bj.png)
 *Description of the screenshot.*
 
-![Side Bets Viewer](path/to/screenshot2.png)
+![Side Bets Viewer](path/to/sidebet.png)
 *Description of the screenshot.*
 
 ## Development
