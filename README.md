@@ -13,7 +13,7 @@ This is a browser extension that displays a Blackjack table when opened. The ext
 
 ## Installation
 
-1. Download the ZIP file.
+1. Download the ZIP file and extract the folder in your computer. 
 2. Open Google Chrome and go to `chrome://extensions/`.
 3. Enable **Developer mode** (toggle in the top right corner).
 4. Click **Load unpacked** and select the folder containing the extension files.
