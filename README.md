@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a Google Chrome extension that displays a Blackjack table when opened. The extension includes the following features:
+This is a browser extension that displays a Blackjack table when opened. The extension includes the following features:
 - A fully functional Blackjack table interface.
 - A button to reveal and manage side bets.
 
