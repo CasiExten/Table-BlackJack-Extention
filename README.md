@@ -40,7 +40,7 @@ This is a Google Chrome extension that displays a Blackjack table when opened. T
 ### Requirements
 - A browser that supports unpacked extensions in developer mode : 
 
-- Google Chrome, Microsoft Edge, Mozilla Firefox, Opera GX, Brave
+- Google Chrome, Microsoft Edge, Mozilla Firefox, Opera GX, Brave..
 - Basic understanding of JavaScript, HTML, and CSS for customization.
 
 
