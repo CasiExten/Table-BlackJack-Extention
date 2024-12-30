@@ -28,12 +28,12 @@ This is a Google Chrome extension that displays a Blackjack table when opened. T
 3. Click the **Side Bets** button to view and interact with side bets.
 
 ## Screenshots
-
-![Blackjack Table](bj.png)
 *Blackjack table interface.*
+![Blackjack Table](bj.png)
 
-![Side Bets Viewer](sidebet.png)
 *Side bets options.*
+![Side Bets Viewer](sidebet.png)
+
 
 ## Development
 
