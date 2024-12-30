@@ -23,6 +23,7 @@ This is a browser extension that displays a Blackjack table when opened. The ext
 1. Click on the extension icon in your browser to open the Blackjack table.
 2. Use the interface to play Blackjack.
 3. Click the **Side Bets** button to view and interact with side bets.
+4. You can play with this extension on online casino sites such as stake or any others of your choice.
 
 ## Screenshots
 
